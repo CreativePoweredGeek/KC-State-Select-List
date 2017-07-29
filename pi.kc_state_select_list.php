@@ -2,7 +2,7 @@
 
 class Kc_state_select_list {
 
-    public function state_list() {
+    public function us_state_list() {
 		
 		$state_list = array(
 			'AL'=>"Alabama",  
@@ -65,6 +65,34 @@ class Kc_state_select_list {
 		$output .= '</select>';
 		
 		return $output;
+	}
+	
+	public function ca_provinces() {
+		$provinces = array(
+			'ON' => 'Ontario',
+			'QC' => 'Quebec',
+			'NS' => 'Nova Scotia',
+			'NB' => 'New Brunswick',
+			'MB' => 'Manitoba',
+			'BC' => 'British Columbia',
+			'PE' => 'Prince Edward Island',
+			'SK' => 'Saskatchewan',
+			'AB' => 'Alberta',
+			'NL' => 'Newfoundland and Labrador',
+			'YT' => 'Yukon Territory',
+			'NWT' => 'Northwest Territories',
+			'NVT' => 'Nunavut'
+		);
+		
+		$output = '<select name="">';
+		foreach($provinces as $key => $value) {
+			$output .= '<option value="'.$key.'">'.$value.'</option>';
+		}
+		$output .= '</select>';
+		
+		return $output;
+		
+		
 	}
 }
 
